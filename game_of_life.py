@@ -1,3 +1,9 @@
+"""
+# TODO:
+    1. add check of reccuring condition of the field
+    2. add stop after p.1
+"""
+
 import time
 
 class Field:
@@ -74,7 +80,7 @@ class Cell:
         self.value = field[self.coordinate_of_cell[0]][self.coordinate_of_cell[1]]
         return self.value
 
-if __name__ == '__main__':
+def work():
     field = Field(10, 10) # set start parameters of game field
     field.empty_field() # generate empty field
     game = field.start_fields([[3, 0], [3, 1], [2, 1], [1, 1], [2, 2]])
@@ -119,4 +125,7 @@ if __name__ == '__main__':
                 game[change[0]][change[1]] = '1'
         print('__________________________________________')
         time.sleep(1)
-        
+
+
+if __name__ == '__main__':
+    work()
